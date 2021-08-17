@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+
+celltrack_bin/20*
+download/*
+processed*
