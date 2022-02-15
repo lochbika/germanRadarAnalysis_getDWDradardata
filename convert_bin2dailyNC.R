@@ -1,4 +1,3 @@
-setwd("/home/kai/nobackup/german_radar/get_DWD_Radar_data/")
 library("dwdradar")
 library("raster")
 library("ncdf4")
@@ -9,32 +8,8 @@ library("iterators")
 in.path <- "download/"
 out.path <- "processed_bin/"
 
-months <- sprintf("%02d", c(3, 10, 11))
-#months <- sprintf("%02d", 9)
-#years <- as.character(seq(2001, 2020))
-years <-
-  c(
-    "2001",
-    "2002",
-    "2003",
-    "2004",
-    "2005",
-    "2006",
-    "2007",
-    "2008",
-    "2009",
-    "2010",
-    "2011",
-    "2012",
-    "2013",
-    "2014",
-    "2015",
-    "2016",
-    "2017",
-    "2018",
-    "2019",
-    "2020"
-  )
+months <- sprintf("%02d", seq(3,11))
+years <- as.character(seq(2001, 2020))
 days <- sprintf("%02d", seq(1, 31))
 hours <- sprintf("%02d", seq(0, 23))
 minutes <- sprintf("%02d", seq(0, 55, 5))
